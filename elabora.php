@@ -1,6 +1,8 @@
 <?php 
 $lunghezza = $_GET["lunghezza"]; 
 $password = $_GET["password"] ?? "";
+$caratteri = "abcdefghilmnopqrstuvzABCDEFGHILMNOPQRSTUVZ123456789@#!$%&";
+
 
 
 ?>
@@ -16,10 +18,10 @@ $password = $_GET["password"] ?? "";
 <body>
     <?php 
         for ($i = 0; $i <= $lunghezza - 1; $i++) { 
-            $password = $password . "x";
+            $password = $password . $caratteri[rand(0, strlen($caratteri) - 1)];
             
         }
-        echo $password
+        echo $password;
     
     ?>
 </body>
