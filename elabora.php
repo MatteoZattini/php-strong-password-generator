@@ -16,10 +16,10 @@ $password = $_GET["password"] ?? "";
 <body>
     <?php 
         for ($i = 0; $i <= $lunghezza - 1; $i++) { 
-            echo "x";
+            $password = $password . "x";
             
         }
-        
+        echo $password
     
     ?>
 </body>
